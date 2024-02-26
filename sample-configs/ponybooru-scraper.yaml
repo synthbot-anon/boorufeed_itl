@@ -1,0 +1,22 @@
+---
+apiVersion: boorufeed.synthbot.ai/v1
+kind: PhilomenaScraper
+metadata:
+  name: ponybooru-scraper
+spec:
+  stream: ponybooru
+  domain: ponybooru.org
+  searchApi: "/api/v1/json/search/images"
+  scrapeInterval: 600
+  minDataAge: 3600
+  filter: 2
+  query: ""
+---
+apiVersion: boorufeed.synthbot.ai/v1
+kind: RateLimit
+metadata:
+  name: ponybooru-ratelimit
+spec:
+  domain: ponybooru.org
+  period: 3
+  limit: 1

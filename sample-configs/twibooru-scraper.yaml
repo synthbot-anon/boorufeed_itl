@@ -1,0 +1,23 @@
+---
+apiVersion: boorufeed.synthbot.ai/v1
+kind: PhilomenaScraper
+metadata:
+  name: twibooru-scraper
+spec:
+  stream: twibooru
+  domain: twibooru.org
+  searchApi: "/api/v3/search/posts"
+  scrapeInterval: 600
+  minDataAge: 3600
+  filter: 2
+  query: ""
+---
+apiVersion: boorufeed.synthbot.ai/v1
+kind: RateLimit
+metadata:
+  name: twibooru-ratelimit
+spec:
+  domain: twibooru.org
+  period: 60
+  limit: 10
+

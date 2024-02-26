@@ -1,0 +1,23 @@
+---
+apiVersion: boorufeed.synthbot.ai/v1
+kind: PhilomenaScraper
+metadata:
+  name: derpibooru-scraper
+spec:
+  stream: derpibooru
+  domain: derpibooru.org
+  searchApi: "/api/v1/json/search/images"
+  scrapeInterval: 60
+  minDataAge: 1800
+  filter: 56027
+  query: ""
+---
+apiVersion: boorufeed.synthbot.ai/v1
+kind: RateLimit
+metadata:
+  name: derpibooru-ratelimit
+spec:
+  domain: derpibooru.org
+  period: 3
+  limit: 1
+

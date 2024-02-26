@@ -1,0 +1,44 @@
+apiVersion: thatone.ai/v1
+kind: ResourceSpec
+metadata:
+  name: boorufeed-config
+spec:
+  clients:
+  - name: op
+    namespace: https://resources.thatone.ai
+  - name: scraper
+    namespace: https://resources.thatone.ai
+  groups:
+  - name: op
+    owner: op
+    includeClients: [op]
+  - name: scraper
+    owner: op
+    includeClients: [scraper]
+  - name: public
+    owner: op
+    public: true
+  loops:
+  - name: booru-streams
+    owner: op
+    dacWhitelistRead: [public]
+    dacWhitelistWrite: [scraper]
+  - name: debug
+    owner: op
+    dacWhitelistRead: [op]
+    dacWhitelistWrite: [scraper]
+  streams:
+  - name: debug
+    loop: debug
+  - name: derpibooru
+    loop: booru-streams
+  - name: twibooru
+    loop: booru-streams
+  - name: ponybooru
+    loop: booru-streams
+  clusters:
+  - name: boorufeed-configs
+    owner: op
+    dacWhitelistRead: [op, scraper]
+    dacWhitelistWrite: [scraper]
+    dacDefaultExecute: [op, scraper]
