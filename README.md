@@ -12,7 +12,7 @@ It's designed to be easily modifiable.
 
 ```bash
 pip install --upgrade itllib
-python3 client.py
+python3 sample-client/client.py
 ```
 
 The `kwargs` will look like this:
