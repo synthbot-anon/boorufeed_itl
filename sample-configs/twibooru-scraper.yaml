@@ -19,5 +19,5 @@ metadata:
 spec:
   domain: twibooru.org
   period: 60
-  limit: 10
+  limit: 6
 
