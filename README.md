@@ -49,7 +49,8 @@ pip install --upgrade .
 # Create your own cluster, streams, and users
 python3 -m loopctl apply loop_config.yaml
 
-# Run the scraper
+# Run the scraper. It will look for ./loop-resources and ./loop-secrets in the
+# current directly. Both folders are created by the previous loopctl command.
 python3 -m boorufeed_itl
 ```
 
