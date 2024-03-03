@@ -23,7 +23,7 @@ def age(iso_timestamp):
 
 def randomString():
     letters = [random.choice(string.ascii_letters) for i in range(32)]
-    return "".join(letters)
+    return "".join(letters).lower()
 
 
 class PhilomenaScraperConfig(ScraperConfig):

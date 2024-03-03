@@ -18,5 +18,5 @@ metadata:
   name: ponybooru-ratelimit
 spec:
   domain: ponybooru.org
-  period: 3
+  period: 10
   limit: 1
