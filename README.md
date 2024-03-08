@@ -1,3 +1,6 @@
+# Currently down!
+A cloud outage took down a lot of the demo infrastructure. Rather than hacking together a fix, I'm cleaning up the backend and making it more robust. Once that's ready, this demo should work again.
+
 # boorufeed_itl
 `boorufeed_itl` is a module that scrapes boorus and provides the results to a `loop`.
 All messages in a loop are *ephemeral*, so they're good for streaming uses, not
